@@ -83,7 +83,9 @@ table, tr, td {
     font-size: 30px;
 }
 
-
+.methodStepCol1 {
+    width: 100px;
+}
 
 
 

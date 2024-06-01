@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="recipes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="recipes.css">
+
+    <script>
+        $(function () {
+            buildPage(1);
+        });
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <br/>
+        <div id="titel" class="center"></div>
+        <br/>
+        <img src="img/nachos.jpg" alt="bild nachos" class="img"><br/>
+            <span class="InfosForRecipe">
+                <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+                20 min.
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
+                normal
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
+                26.05.2024
+            </span>
+        <br/><br/>
+    <div class="titel-2" class="center">Zutaten:</div>
+    <div id="recipe"></div>
+    <div id="ingredients">
+        <table class="center" id="ingredientTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2" class="center">Nährwerte pro Portion:</div>
+    <div id="Nährwerte">
+        <table class="center" id="NutritionalValuesTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2">Zubereitung:</div>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Arbeitszeit ca. 20 min.
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Koch-/Backzeit ca. 15 Minuten
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Gesamtzeit ca. 35 Minuten
+        </span>
+    <br/><br/>
+    <div id="method">
+        <table class="center" id="methodTable"></table>
+    </div>
+</div>
+</body>
+
+</html>
