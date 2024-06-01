@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch burrito 1</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #content {
+            margin: auto;
+            width: 50%;
+        }
+
+        #titel {
+            font-size: 40px;
+            background-color: grey;
+        }
+
+        #FoodGenres {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
+        .FoodGenre {
+            margin: 5px;
+            background-color: grey;
+            width: 300px;
+        }
+
+        .FoodGenreTitle {
+            height: 20px;
+        }
+
+        .FoodGenreImg img {
+            width: 500px;
+        }
+
+        .recipeShortDesc {
+            height: 20px;
+        }
+
+        #FoodGenreDivSize {
+            width: 800px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        var FoodGenres = [
+            {
+                title: 'Mexikanisch',
+                img: 'img/mexican.jpg',
+                href: 'mexikanisch-rezept.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Italienisch',
+                img: 'img/italien.jpg',
+                href: 'Italienisch-rezept.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Asiatisch',
+                img: 'img/asian.jpg',
+                href: 'recipes/quesadilla.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Nachtisch',
+                img: 'img/dessert.jpg',
+                href: 'recipes/nacho.html',
+                desc: 'Lorem ipsum blah die blah'
+            }
+        ];
+
+        $(function () {
+            buildMyPage();
+        });
+
+        function buildMyPage() {
+
+            for (let i = 0; i < FoodGenres.length; i++) {
+
+                var newGenreToAdd = '';
+
+                newGenreToAdd = '<div class="FoodGenre" id="FoodGenreDivSize">';
+                newGenreToAdd += '<div class="FoodGenreTitle">' + FoodGenres[i].title + '</div>';
+                newGenreToAdd += '<div class="FoodGenreImg"><a href="' + FoodGenres[i].href + '"><img src="' + FoodGenres[i].img + '"/></a></div>';
+                newGenreToAdd += '<div class="FoodGenreShortDesc">' + FoodGenres[i].desc + '</div>';
+                newGenreToAdd += '</div>';
+
+                $('#FoodGenres').append(newGenreToAdd);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="content">
+    <div id="titel">Menu</div>
+    <div id="FoodGenres"></div>
+</div>
+</body>
+
+</html>

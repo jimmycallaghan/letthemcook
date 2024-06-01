@@ -1,0 +1,116 @@
+body {
+    font-family: arial;
+}
+
+#content {
+    margin: auto;
+    width: 50%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+#titel {
+    font-size: 50px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.titel-2 {
+    font-size: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+
+
+
+
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipe {
+    margin: 5px;
+    background-color: grey;
+    width: 400px;
+}
+
+.recipeTitle {
+    height: 20px;
+}
+
+.recipeImg img {
+    height: 260px;
+}
+
+.recipeShortDesc {
+    height: 20px;
+}
+
+.InfosForRecipe {
+    border-radius: 10px;
+    /*background-color: lightgray;*/
+    border: 2px solid rgb(119, 119, 119);
+    font-size: 30px
+}
+
+
+
+
+
+table, tr, td {
+    border-spacing: 0px;
+}
+
+.tableEven {
+    background-color: #cccccc;
+}
+
+.tableOdd {
+    background-color: #ffffff;
+}
+
+#ingredientTable {
+    font-size: 30px;
+}
+
+
+
+
+
+.ingAmount {
+    width: 200px;
+}
+
+.ingName {
+    width: 400px;
+}
+
+#NutritionalValuesTable {
+    font-size: 30px;
+}
+
+
+
+
+
+#text {
+    font-size: 30px;
+}
+
+.img {
+    height: 530px;
+}
+
+.InfoRecipeImg {
+    height: 25px;
+}

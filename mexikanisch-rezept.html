@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch burrito 1</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #content {
+            margin: auto;
+            width: 50%;
+        }
+
+        #titel {
+            font-size: 40px;
+            background-color: grey;
+        }
+
+        #recipes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .recipe {
+            margin: 5px;
+            background-color: grey;
+            width: 300px;
+        }
+
+        .recipeTitle {
+            height: 20px;
+        }
+
+        .recipeImg img {
+            height: 200px;
+        }
+
+        .recipeShortDesc {
+            height: 20px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        // Define an array in the square brackets that contains all of the recipes. Each recipe
+        // has a name, image url and short description
+        var recipes = [
+            {
+                // Recipe 0
+                title: 'Burrito',
+                img: 'recipes/img/burrito.jpg',
+                href: 'recipes/burrito.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                // Recipe 1
+                title: 'Taco',
+                img: 'recipes/img/tacos.jpg',
+                href: 'recipes/tacos.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                // Recipe 2
+                title: 'Quesadilla',
+                img: 'recipes/img/quesadillo.jpg',
+                href: 'recipes/quesadilla.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                // Recipe 3
+                title: 'Nacho',
+                img: 'recipes/img/nachos.jpg',
+                href: 'recipes/nachos.html',
+                desc: 'Lorem ipsum blah die blah'
+            }
+        ];
+
+        // This tells the browser not to run the code inside the curley brackets until
+        // jQuery has finished loading. If you don't do this, jQuery will not work.
+        // After jQuery has loaded, we will call the buildMyPage function...
+        $(function () {
+            buildMyPage();
+        });
+
+        // All of the page building goes in here...
+        function buildMyPage() {
+
+            // For each recipe that we have, build the html that will be added to the recipes div on
+            // the html page.
+
+            // Loop through each of the objects in the recipes array - starting with element 0
+            // and ending when we reach the end of the array - recipes.length. This way you can
+            // have as many recipes as you like and you don't need to add any html.
+
+            // We build the following HTML and then add it (append it) to the #recipes div...
+            // <div className="recipe">
+            //     <div className="recipeTitle">Burrito</div>
+            //     <div className="recipeImg"><a href="recipes/burrito.html"><img src="img/burrito.jpg"/></a></div>
+            //     <div className="recipeShortDesc">Burritos are awesome...</div>
+            // </div>
+
+            for (let i = 0; i < recipes.length; i++) {
+
+                // Create a new string called newRecipeToAdd
+                var newRecipeToAdd = '';
+
+                // Add all of the html that makes up the recipe widget in the page
+                newRecipeToAdd = '<div class="recipe">';
+                newRecipeToAdd += '<div class="recipeTitle">' + recipes[i].title + '</div>';
+                newRecipeToAdd += '<div class="recipeImg"><a href="' + recipes[i].href + '"><img src="' + recipes[i].img + '"/></a></div>';
+                newRecipeToAdd += '<div class="recipeShortDesc">' + recipes[i].desc + '</div>';
+                newRecipeToAdd += '</div>';
+
+                // Find the div with id=recipes on the page and add the new html to it.
+                // Anything like $(...) is jQuery. Look up jQuery on W3Schools
+                $('#recipes').append(newRecipeToAdd);
+
+                // Loop around to the next element in the array list and repeat
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="content">
+    <div id="titel">Mexicano</div>
+    <div id="recipes"></div>
+</div>
+</body>
+
+</html>

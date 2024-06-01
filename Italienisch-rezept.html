@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch burrito 1</title>
+    <style>
+        body {
+            font-family: arial;
+        }
+
+        #content {
+            margin: auto;
+            width: 50%;
+        }
+
+        #titel {
+            font-size: 40px;
+            background-color: grey;
+        }
+
+        #recipes {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .recipe {
+            margin: 5px;
+            background-color: grey;
+            width: 300px;
+        }
+
+        .recipeTitle {
+            height: 20px;
+        }
+
+        .recipeImg img {
+            height: 200px;
+        }
+
+        .recipeShortDesc {
+            height: 20px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        var recipes = [
+            {
+                title: 'Penne al arrabiata',
+                img: 'recipes/img/penne al arrabiata.png',
+                href: 'recipes/Penne al arrabiata.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Spaghetti carbonara',
+                img: 'recipes/img/spaghetti cabonara.jpg',
+                href: 'recipes/tacos.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Spaghetti bolognese',
+                img: 'recipes/img/spaghetti bolognese.jpg',
+                href: 'recipes/quesadilla.html',
+                desc: 'Lorem ipsum blah die blah'
+            },
+            {
+                title: 'Pizza margherita',
+                img: 'recipes/img/pizza margherita.jpg',
+                href: 'recipes/nacho.html',
+                desc: 'Lorem ipsum blah die blah'
+            }
+        ];
+
+        $(function () {
+            buildMyPage();
+        });
+
+        function buildMyPage() {
+
+            for (let i = 0; i < recipes.length; i++) {
+
+                var newRecipeToAdd = '';
+
+                newRecipeToAdd = '<div class="recipe">';
+                newRecipeToAdd += '<div class="recipeTitle">' + recipes[i].title + '</div>';
+                newRecipeToAdd += '<div class="recipeImg"><a href="' + recipes[i].href + '"><img src="' + recipes[i].img + '"/></a></div>';
+                newRecipeToAdd += '<div class="recipeShortDesc">' + recipes[i].desc + '</div>';
+                newRecipeToAdd += '</div>';
+
+                $('#recipes').append(newRecipeToAdd);
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="content">
+    <div id="titel">Italienisch</div>
+    <div id="recipes"></div>
+</div>
+</body>
+
+</html>

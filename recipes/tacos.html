@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch Tacos 1</title>
+   
+    <script type="text/javascript" src="recipes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="recipes.css">
+
+    <script>
+        var title = "Tacos"
+        var ingredients = [{
+        "name" : "Öl",
+	    "amount" : "1",
+	    "unit" : "EL"
+    },{
+        "name" : "Zwiebel(n)",
+	    "amount" : "1",
+	    "unit" : "große"
+    },{
+        "name" : "Knoblauchzehe(n)",
+	    "amount" : "2",
+        "unit" : "große"
+    },{
+        "name" : "Tinderhackfleisch, mageres",
+	    "amount" : "500",
+        "unit" : "g"
+    },{
+        "name" : "Tomatenmark",
+	    "amount" : "2",
+        "unit" : "EL"
+    },{
+        "name" : "Chilipulver",
+	    "amount" : "1/2",
+	    "unit" : "EL"
+    },{
+        "name" : "Paprikapulver",
+	    "amount" : "1",
+	    "unit" : "TL"
+    },{
+        "name" : "Kreuzkümmelpulver",
+        "amount": "1",
+        "unit" : "TL"
+    },{
+        "name" : "Korianderpulver",
+   	    "amount" : "1",
+	    "unit" : "TL"
+    },{
+        "name" : "Oregano",
+	    "amount" : "1/2",
+	    "unit" : "TL"
+    },{
+        "name" : "Zucker",
+	    "amount" : "1",
+	    "unit" : "TL"
+    },{
+        "name" : "Salz",
+	    "amount" : "1",
+	    "unit" : "Prise"
+    },{
+        "name" : "Tacos (schalen)",
+	    "amount" : "12",
+	    "unit" : "kleine"
+    },{
+        "name" : "Eisbergsalat (große Blätter), zerkleinert",
+	    "amount" : "4",
+	    "unit" : "Blätter"
+    },{
+        "name" : "Cheddarkäse, geriebener",
+	    "amount" : "190",
+	    "unit" : "g"
+    },{
+        "name" : "Salsa (Tomatensalsa)",
+	    "amount" : "100",
+	    "unit" : "g"
+    }
+        ];
+        var Nährwerte = [{
+            "name": "kcal",
+            "amount" : "114"
+    },{
+            "name" : "Eiweiß",
+            "amount" : "9g"
+    },{
+            "name" : "Fett",
+            "amount" : "4g"
+    },{
+            "name" : "Kohlenhydrate",
+            "amount" : "10g"
+    }
+        ];
+
+        $(function () {
+            buildTitle(title);
+            buildIngredients(ingredients);
+            buildNährwerte(Nährwerte);
+        });
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <br/>
+        <div id="titel" class="center"></div>
+        <br/>
+        <img src="img/tacos.jpg" alt="bild taco" class="img"><br/>
+            <span class="InfosForRecipe">
+                <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+                30 min.
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
+                normal
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
+                26.05.2024
+            </span>
+        <br/><br/>
+    <div class="titel-2" class="center">Zutaten:</div>
+    <div id="recipe"></div>
+    <div id="ingredients">
+        <table class="center" id="ingredientTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2" class="center">Nährwerte pro Portion:</div>
+    <div id="Nährwerte">
+        <table class="center" id="NutritionalValuesTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2">Zubereitung:</div>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Arbeitszeit ca. 30 min.
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Koch-/Backzeit ca. 20 Minuten
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Gesamtzeit ca. 50 Minuten
+        </span>
+    <br/><br/>
+    <div id="text">Reis, Kokosmilch und Brühe in einen Topf geben und aufkochen. Hitze reduzieren und
+        bei geschlossenem Deckel 10 Min. köcheln lassen. Limette und Koriander waschen
+        und trocknen. Von der Limette die Schale fein abreiben und den Saft auspressen.
+        Koriander hacken. Cashewkerne ebenfalls grob hacken. Alles unter den Reis rühren.
+        Tomaten grob würfeln.
+        <br/>
+        <br/>
+        Etwas Öl in einer Pfanne erhitzen. Das Hackfleisch darin bei starker Hitze rundherum
+        krümelig braten. Mit Salz, Pfeffer und Cayennepfeffer würzen.
+        <br/>
+        <br/>
+        Tacoschalen mit Reis, Tomaten und dem Hackfleisch füllen, einen Klecks Crème
+        fraîche dazugeben.</div>
+    <div id="method"></div>
+</div>
+</body>
+
+</html>

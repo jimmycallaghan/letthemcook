@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch Tacos 4</title>
+   
+    <script type="text/javascript" src="recipes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="recipes.css">
+
+    <script>
+        var title = "BBQ-Hühnchen-Nachos"
+        var ingredients = [{
+        "name" : "Öl",
+	    "amount" : "1",
+	    "unit" : "TL"
+    },{
+        "name" : "Hühnerbrustfilet(s)",
+	    "amount" : "2",
+	    "unit" : "große"
+    },{
+        "name" : "Salz, grob",
+	    "amount" : "1/2",
+        "unit" : "TL"
+    },{
+        "name" : "Pfeffer",
+	    "amount" : "1/2",
+        "unit" : "TL"
+    },{
+        "name" : "Knoblauchpulver",
+	    "amount" : "1",
+        "unit" : "TL"
+    },{
+        "name" : "Chilipulver",
+	    "amount" : "1",
+	    "unit" : "TL"
+    },{
+        "name" : "Barbecuesauce",
+	    "amount" : "200",
+	    "unit" : "ml"
+    },{
+        "name" : "Tortillachips",
+        "amount": "1",
+        "unit" : "Pck."
+    },{
+        "name" : "Käse, geriebener, z.B. Gouda, Cheddar",
+   	    "amount" : "200",
+	    "unit" : "g"
+    },{
+        "name" : "Zwiebel(n), rote, gewürfelt",
+	    "amount" : "1/2",
+	    "unit" : "große"
+    },{
+        "name" : "Tomate(n), gewürfelt",
+	    "amount" : "1",
+	    "unit" : "große"
+    },{
+        "name" : "Schicken, gewürfelt",
+	    "amount" : "8",
+	    "unit" : "Scheibe/n"
+    },{
+        "name" : "Petersilie, gehackt",
+	    "amount" : "2",
+	    "unit" : "TL"
+    },{
+        "name" : "saure Sahne",
+	    "amount" : "120",
+	    "unit" : "ml"
+    }
+        ];
+        var Nährwerte = [{
+            "name": "kcal",
+            "amount" : "306"
+    },{
+            "name" : "Eiweiß",
+            "amount" : "17g"
+    },{
+            "name" : "Fett",
+            "amount" : "34g"
+    },{
+            "name" : "Kohlenhydrate",
+            "amount" : "58g"
+    }
+        ];
+
+        $(function () {
+            buildTitle(title);
+            buildIngredients(ingredients);
+            buildNährwerte(Nährwerte);
+        });
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <br/>
+        <div id="titel" class="center"></div>
+        <br/>
+        <img src="img/nachos.jpg" alt="bild nachos" class="img"><br/>
+            <span class="InfosForRecipe">
+                <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+                20 min.
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
+                normal
+            </span>
+            <span class="InfosForRecipe">
+                <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
+                26.05.2024
+            </span>
+        <br/><br/>
+    <div class="titel-2" class="center">Zutaten:</div>
+    <div id="recipe"></div>
+    <div id="ingredients">
+        <table class="center" id="ingredientTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2" class="center">Nährwerte pro Portion:</div>
+    <div id="Nährwerte">
+        <table class="center" id="NutritionalValuesTable"></table>
+    </div>
+    <br/>
+    <div class="titel-2">Zubereitung:</div>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Arbeitszeit ca. 20 min.
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Koch-/Backzeit ca. 15 Minuten
+        </span>
+        <span class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            Gesamtzeit ca. 35 Minuten
+        </span>
+    <br/><br/>
+    <div id="text">Hühnerbrustfilets in Würfel schneiden.
+        <br/>
+        <br/>
+        Öl in einer Pfanne stark erhitzen. Zuerst Hühnerbrust-Würfel anbraten, dann Salz,
+        Pfeffer, Knoblauchpulver und Chilipulver hinzufügen. Gut umrühren.
+        Barbecuesauce hinzufügen und 5 Minuten köcheln lassen.
+        <br/>
+        <br/>
+        In einer tiefen Bratpfanne 2 Hände voll Tortilla-Chips verteilen und mit der Hälfte
+        des marinierten Hühnchens belegen. Käse, Zwiebel, Tomate, Schinken und
+        Petersilie darüber verteilen. Anschließend den Vorgang nochmal wiederholen.
+        <br/>
+        <br/>
+        Bei 175 °C Ober-/Unterhitze für 15 Minuten backen.
+        <br/>
+        <br/>
+        Zum Servieren saure Sahne darauf geben.</div>
+    <div id="method"></div>
+</div>
+</body>
+
+</html>
