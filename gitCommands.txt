@@ -1,0 +1,33 @@
+--- To get the files on a new computer ---
+
+#Open a command prompt
+Windows Start Key --> cmd
+
+# For people to get the repository locally, they need to do the following:
+cd <Where do you want to install the files>
+git clone https://github.com/jimmycallaghan/letthemcook.git
+
+
+---- To work on the files ---
+
+#Open a command prompt
+Windows Start Key --> cmd
+
+# Go to the directory that your project is in:
+cd C:\Users\calla\WebstormProjects\letthemcook
+
+#Use this after you have finished doing work to push the changes up to GitHub
+git add --all
+git commit -m "Message to say what you changed - this message can be anything you like"
+git push
+
+--- To get changes from GiutHub ---
+
+#Open a command prompt
+Windows Start Key --> cmd
+
+# Go to the directory that your project is in:
+cd C:\Users\calla\WebstormProjects\letthemcook
+
+#If anyone else has made changes, pull them down to your compüuter with this...
+git pull
