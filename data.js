@@ -1,6 +1,16 @@
 var recipes = [
     {
         name: "Burrito",
+        desc: "Yum yum",
+        infos: {
+            cookingTime: 20,
+            difficulty: "normal",
+            dateAdded: "01.06.2024"
+        },
+        img: {
+          src: "/img/burrito.jpg",
+          alt: "Image of a Burrito"
+        },
         ingredients: [
             {
                 "name" : "Tomaten",
@@ -101,6 +111,16 @@ var recipes = [
         ]
     },{
         name: "Tacos",
+        desc: "Tits and bum",
+        infos: {
+            cookingTime: 45,
+            difficulty: "easy",
+            dateAdded: "02.06.2024"
+        },
+        img: {
+            src: "/img/tacos.jpg",
+            alt: "Image of Tacos"
+        },
         ingredients: [
                 {    
                 "name" : "Öl",
@@ -198,6 +218,16 @@ var recipes = [
         ]
     },{    
         name: "Quesadilla",
+        desc: "Cock and balls",
+        infos: {
+            cookingTime: 30,
+            difficulty: "normal",
+            dateAdded: "03.06.2024"
+        },
+        img: {
+            src: "img/quesadillo.jpg",
+            alt: "Image of a Quesadillo"
+        },
         ingredients: [
             {
                 "name" : "Hähnchenbrustfilet(s)",
@@ -290,6 +320,16 @@ var recipes = [
         ]
     },{
         name: "BBQ-Chicken-Nachos",
+        desc: "Please Mr Teacher, cum in my mouth",
+        infos: {
+            cookingTime: 20,
+            difficulty: "normal",
+            dateAdded: "04.06.2024"
+        },
+        img: {
+            src: "img/nachos.jpg",
+            alt: "Image of Nachos"
+        },
         ingredients: [
             {
             "name": "Oel",
@@ -377,5 +417,5 @@ var recipes = [
 
             "Zum Servieren saure Sahne darauf geben."
             ]
-    },
+    }
 ]

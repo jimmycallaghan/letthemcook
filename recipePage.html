@@ -9,7 +9,9 @@
 
     <script>
         $(function () {
-            buildPage(3);
+            var recipeId = getQueryParam('recipeId');
+            console.log(recipeId);
+            buildPage(recipeId);
         });
     </script>
 </head>
@@ -19,19 +21,16 @@
     <br/>
         <div id="titel" class="center"></div>
         <br/>
-        <img src="img/nachos.jpg" alt="bild nachos" class="img"><br/>
-            <span class="InfosForRecipe">
-                <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
-                20 min.
-            </span>
-            <span class="InfosForRecipe">
-                <img src="img/difficulty scale.png" a   lt="difficulty scale image;" class="InfoRecipeImg">
-                normal
-            </span>
-            <span class="InfosForRecipe">
-                <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
-                26.05.2024
-            </span>
+        <div id="recipeImg"></div>
+        <span id="cookTimeText" class="InfosForRecipe">
+            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+        </span>
+        <span id="difficulty" class="InfosForRecipe">
+            <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
+        </span>
+        <span id="dateAdded" class="InfosForRecipe">
+            <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
+        </span>
         <br/><br/>
     <div class="titel-2" class="center">Zutaten:</div>
     <div id="recipe"></div>

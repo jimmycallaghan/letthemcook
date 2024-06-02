@@ -2,6 +2,11 @@
 <html lang="de">
 <head>
     <title>Mexikanisch burrito 1</title>
+
+    <script type="text/javascript" src="data.js" ty></script>
+    <script type="text/javascript" src="recipes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <style>
         body {
             font-family: arial;
@@ -44,38 +49,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-        // Define an array in the square brackets that contains all of the recipes. Each recipe
-        // has a name, image url and short description
-        var recipes = [
-            {
-                // Recipe 0
-                title: 'Burrito',
-                img: 'recipes/img/burrito.jpg',
-                href: 'recipes/burrito.html',
-                desc: 'Lorem ipsum blah die blah'
-            },
-            {
-                // Recipe 1
-                title: 'Taco',
-                img: 'recipes/img/tacos.jpg',
-                href: 'recipes/tacos.html',
-                desc: 'Lorem ipsum blah die blah'
-            },
-            {
-                // Recipe 2
-                title: 'Quesadilla',
-                img: 'recipes/img/quesadillo.jpg',
-                href: 'recipes/quesadilla.html',
-                desc: 'Lorem ipsum blah die blah'
-            },
-            {
-                // Recipe 3
-                title: 'Nacho',
-                img: 'recipes/img/nachos.jpg',
-                href: 'recipes/nachos.html',
-                desc: 'Lorem ipsum blah die blah'
-            }
-        ];
 
         // This tells the browser not to run the code inside the curley brackets until
         // jQuery has finished loading. If you don't do this, jQuery will not work.
@@ -103,13 +76,17 @@
 
             for (let i = 0; i < recipes.length; i++) {
 
+                console.log(recipes[i].img.src);
+
                 // Create a new string called newRecipeToAdd
                 var newRecipeToAdd = '';
 
+                var url = "/letthemcook/recipePage.html?recipeId=" + i;
+
                 // Add all of the html that makes up the recipe widget in the page
                 newRecipeToAdd = '<div class="recipe">';
-                newRecipeToAdd += '<div class="recipeTitle">' + recipes[i].title + '</div>';
-                newRecipeToAdd += '<div class="recipeImg"><a href="' + recipes[i].href + '"><img src="' + recipes[i].img + '"/></a></div>';
+                newRecipeToAdd += '<div class="recipeTitle">' + recipes[i].name + '</div>';
+                newRecipeToAdd += '<div class="recipeImg"><a href="' + url + '"><img src="' + recipes[i].img.src + '"/></a></div>';
                 newRecipeToAdd += '<div class="recipeShortDesc">' + recipes[i].desc + '</div>';
                 newRecipeToAdd += '</div>';
 
