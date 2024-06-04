@@ -2,6 +2,8 @@
 <html lang="de">
 <head>
 
+    <title>Let them cook</title>
+
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="recipes.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -10,30 +12,39 @@
     <script>
         $(function () {
             var recipeId = getQueryParam('recipeId');
-            console.log(recipeId);
             buildPage(recipeId);
         });
     </script>
 </head>
+
+
+
 <body>
+
+    <header id="header">
+        <img class="logo" src="logo.png" alt="Logo der Website">
+              <span id="title">Let them cook</span>
+    </header>
 
 <div id="content">
     <br/>
         <div id="titel" class="center"></div>
         <br/>
         <div id="recipeImg"></div>
-        <span id="cookTimeText" class="InfosForRecipe">
-            <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
-        </span>
-        <span id="difficulty" class="InfosForRecipe">
-            <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
-        </span>
-        <span id="dateAdded" class="InfosForRecipe">
-            <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
-        </span>
-        <br/><br/>
+
+            <span id="cookTimeText" class="InfosForRecipe">
+                <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
+            </span>
+            <span id="difficulty" class="InfosForRecipe">
+                <img src="img/difficulty scale.png" alt="difficulty scale image;" class="InfoRecipeImg">
+            </span>
+            <span id="dateAdded" class="InfosForRecipe">
+                <img src="img/calendar.jpg" alt="release date image;" class="InfoRecipeImg">
+            </span>
+    <br/><br/>
+
     <div class="titel-2" class="center">Zutaten:</div>
-    <div id="recipe"></div>
+    <div classs="recipe"></div>
     <div id="ingredients">
         <table class="center" id="ingredientTable"></table>
     </div>
@@ -44,22 +55,50 @@
     </div>
     <br/>
     <div class="titel-2">Zubereitung:</div>
-        <span class="InfosForRecipe">
+        
+        <span class="InfosForRecipe" id="worktime">
             <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
-            Arbeitszeit ca. 20 min.
+            Arbeitszeit:
         </span>
-        <span class="InfosForRecipe">
+        <span class="InfosForRecipe" id="oventime">
             <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
-            Koch-/Backzeit ca. 15 Minuten
+            Back-Zeit:
         </span>
-        <span class="InfosForRecipe">
+        <span class="InfosForRecipe" id="cookingTime">
             <img src="img/clock.jpg" alt="image clock;" class="InfoRecipeImg">
-            Gesamtzeit ca. 35 Minuten
+            Insgesamte Zeit:
         </span>
     <br/><br/>
+    
     <div id="method">
         <table class="center" id="methodTable"></table>
     </div>
+</div>
+
+<div class="Footer" class="center">
+    <h1 class="center">Über uns</h1>
+        <div id="aboutustext" class="center">
+           Wir sind ein junges und engagiertes Team von Köchen,<br>
+           die alles daran setzen, euch dabei zu helfen,
+           ein schönes Gericht auf den Teller zu zaubern.<br>
+           Die Community ist uns sehr wichtig, und aus diesem Grund sind alle Gerichte,<br>
+           die sie hier finden von Nutzern angemerkt und von uns perfektioniert.<br>
+           Wir wünschen ihnen viel Spaß am Kochen und hoffen,<br> auch ihre Gerichte bald einmal 
+           in unserem Posteingang zu empfangen.
+        </div>
+
+        <h1 class="center">Location</h1>
+        <div style="text-align: center;" class="center">
+            <img src="Standort.PNG" style="width:750px; height: 500px; border: 2px solid black;">
+        </div>
+          <p style="font-size: 14pt;" class="center"> Glinka Straße 69</p>
+          <p style="font-size: 14pt;" class="center">14199, Berlin</p>
+      <h1 class="center">Kontakt</h1>
+          <p style="text-decoration: underline;" class="center">Email:</p>    
+              <p class="center">let.them.cook@outlook.com</p>
+          <p style="text-decoration: underline;" class="center"> Telefon:</p> 
+              <p class="center">+030 4765889 </p>
+      <br>
 </div>
 </body>
 

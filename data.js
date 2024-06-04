@@ -2,7 +2,7 @@ var recipes = [
     {
         category: "mexican",
         name: "Burrito",
-        desc: "Yum yum",
+        desc: "Ein saftiges Gaumenschmaus für unterwegs",
         infos: {
             cookingTime: 20,
             difficulty: "normal",
@@ -90,6 +90,11 @@ var recipes = [
                     "amount" : "6g"
             }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Die Tomaten fein hacken und wieder in den Saft zurückgeben. Den Mais auf einem " +
             "Sieb abtropfen lassen. Die Paprikaschoten putzen, entkernen, waschen, trocknen " +
@@ -113,7 +118,7 @@ var recipes = [
     },{
         category: "mexican",
         name: "Tacos",
-        desc: "Tits and bum",
+        desc: "El Numero uno -unsere Nummer ein!",
         infos: {
             cookingTime: 45,
             difficulty: "easy",
@@ -205,6 +210,11 @@ var recipes = [
                 "amount" : "10g"
     }
         ],
+        cooktime: {
+            worktime: 5,
+            oventime: 15,
+            cookingTime: 20
+            },
         method: [
             "Reis, Kokosmilch und Brühe in einen Topf geben und aufkochen. Hitze reduzieren und " +
             "bei geschlossenem Deckel 10 Min. köcheln lassen. Limette und Koriander waschen " +
@@ -221,7 +231,7 @@ var recipes = [
     },{   
         category: "mexican", 
         name: "Quesadilla",
-        desc: "Cock and balls",
+        desc: "Was mexikanisches für Käseliebhaber",
         infos: {
             cookingTime: 30,
             difficulty: "normal",
@@ -301,6 +311,11 @@ var recipes = [
                 "amount" : "27g"
             }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Das Hähnchenfleisch klein würfeln, mit Kreuzkümmel, Paprikapulver, " +
             "Salz und Pfeffer würzen und vermischen.",
@@ -324,7 +339,7 @@ var recipes = [
     },{
         category: "mexican",
         name: "BBQ-Chicken-Nachos",
-        desc: "Please Mr Teacher, cum in my mouth",
+        desc: "Perfekt für einen Kinoabend bei dir zu Hause!",
         infos: {
             cookingTime: 20,
             difficulty: "normal",
@@ -408,6 +423,11 @@ var recipes = [
             "amount": "58g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Öl in einer Pfanne stark erhitzen. Zuerst Hühnerbrust-Würfel anbraten, dann Salz, " +
             "Pfeffer, Knoblauchpulver und Chilipulver hinzufügen. Gut umrühren.Barbecuesauce hinzufügen " +
@@ -424,7 +444,7 @@ var recipes = [
     },{
         category: "italien",
         name: "Penne al arrabiata",
-        desc: "Pasta",
+        desc: "Ein Gericht für jeden",
         infos: {
             cookingTime:20,
             difficulty: "normal",
@@ -492,6 +512,11 @@ var recipes = [
             "amount": "80,93g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Den Speck in feine Streifen schneiden. Die Tomaten enthäuten, entkernen, das " +
             "Fruchtfleisch klein schneiden und durch ein Sieb streichen. Die Petersilie und die " +
@@ -521,7 +546,7 @@ var recipes = [
     },{
         category: "italien",
         name: "Spaghetti Cabonara",
-        desc: "pasta",
+        desc: "Ein leckeres Nudelgericht ganz nach deinen Wünschen",
         infos: {
             cookingTime: 5,
             difficulty: "simpel",
@@ -577,6 +602,11 @@ var recipes = [
             "amount": "71,14g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Die Pasta in reichlich Salzwasser bissfest kochen. Den Schinken in Würfel " +
             "schneiden und in wenig Butter anbraten.",
@@ -591,7 +621,7 @@ var recipes = [
     },{
         category: "italien",
         name: "Spaghetti Bolognese",
-        desc: "Pasta",
+        desc: "Da kriegt dein inneres Kind Hunger :)",
         infos: {
             cookingTime: 20,
             difficulty: "normal",
@@ -663,6 +693,11 @@ var recipes = [
             "amount": "98,31g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Zwiebel, Knoblauch und Möhre schälen und in feine Würfel schneiden.",
 
@@ -678,8 +713,8 @@ var recipes = [
         ]
     },{
         category: "italien",
-        name: "Spaghetti Bolognese",
-        desc: "Pasta",
+        name: "Pizza Margherita",
+        desc: "Klassisch - aber trotzdem geil",
         infos: {
             cookingTime: 30,
             difficulty: "normal",
@@ -747,6 +782,11 @@ var recipes = [
             "amount": "96,54g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Das Mehl in eine Schüssel geben und in der Mitte eine Mulde bilden Die Hefe " +
             "zerkrümeln und mit etwas Wasser verrühren. In die Mulde geben, mit Mehl " +
@@ -850,6 +890,11 @@ var recipes = [
             "amount": "60,2g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Das Hühnerbrühepulver mit dem heißen Wasser verrühren. Den Ingwer und die " +
             "Knoblauchzehe klein schneiden in Sojasauce und Mirin erhitzen. Das Ei kochen  " +
@@ -942,6 +987,11 @@ var recipes = [
             "amount": "28,1g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Frühlingszwiebel, Schalotte, Knoblauch und Chili klein hacken.",
 
@@ -1041,6 +1091,11 @@ var recipes = [
             "amount": "33g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Bevor es losgeht, die Sushi-Matte mit Klarsichtfolie einwickeln, so bleibt die " +
             "Matte sauber und der Reis kann sich nicht in den Zwischenräumen der dünnen " +
@@ -1173,6 +1228,11 @@ var recipes = [
             "amount": "3,3g"
         }
         ],
+        cooktime: {
+            worktime: 20,
+            oventime: 15,
+            cookingTime: 35,
+            },
         method: [
             "Das Gemüse und das Fleisch in mundgerechte Stückchen schneiden. Die Zutaten " +
             "für die Sauce in einer Schüssel zusammenrühren.",

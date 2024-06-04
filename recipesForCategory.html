@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Mexikanisch burrito 1</title>
+
+    <script type="text/javascript" src="data.js" ty></script>
+    <script type="text/javascript" src="recipes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="recipes.css">
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        // This tells the browser not to run the code inside the curley brackets until
+        // jQuery has finished loading. If you don't do this, jQuery will not work.
+        // After jQuery has loaded, we will call the buildMyPage function...
+        $(function () {
+            var category = getQueryParam('category');
+            buildMyPage(category);
+        });
+
+        function checkCategory(recipeCategory, category) {
+            return recipeCategory == category
+        }
+
+        // All of the page building goes in here...
+        function buildMyPage(category) {
+
+            console.log(category);
+
+            var categoryRecipes = recipes.filter(function (e) {
+                return e.category === category;
+            });
+
+            // For each recipe that we have, build the html that will be added to the recipes div on
+            // the html page.
+
+            // Loop through each of the objects in the recipes array - starting with element 0
+            // and ending when we reach the end of the array - recipes.length. This way you can
+            // have as many recipes as you like and you don't need to add any html.
+
+            // We build the following HTML and then add it (append it) to the #recipes div...
+            // <div className="recipe">
+            //     <div className="recipeTitle">Burrito</div>
+            //     <div className="recipeImg"><a href="recipes/burrito.html"><img src="img/burrito.jpg"/></a></div>
+            //     <div className="recipeShortDesc">Burritos are awesome...</div>
+            // </div>
+
+            for (let i = 0; i < categoryRecipes.length; i++) {
+
+                console.log(categoryRecipes[i].img.src);
+
+                // Create a new string called newRecipeToAdd
+                var newRecipeToAdd = '';
+
+                var url = "../letthemcook/recipePage.html?recipeId=" + i;
+
+                // Add all of the html that makes up the recipe widget in the page
+                newRecipeToAdd = '<div class="recipe">';
+                newRecipeToAdd += '<div class="recipeTitle">' + categoryRecipes[i].name + '</div>';
+                newRecipeToAdd += '<div class="recipeImg"><a href="' + url + '"><img src="' + categoryRecipes[i].img.src + '"/></a></div>';
+                newRecipeToAdd += '<div class="recipeShortDesc">' + categoryRecipes[i].desc + '</div>';
+                newRecipeToAdd += '</div>';
+
+                // Find the div with id=recipes on the page and add the new html to it.
+                // Anything like $(...) is jQuery. Look up jQuery on W3Schools
+                $('#recipes').append(newRecipeToAdd);
+
+                // Loop around to the next element in the array list and repeat
+            }
+
+            $('#categoryTitle').append(category);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+
+    <header id="header">
+        <img class="logo" src="logo.png" alt="Logo der Website">
+              <span id="title">Let them cook</span>
+    </header>
+
+<br/><br/>
+
+<div id="content">
+    <div id="categoryTitle"></div>
+    <div id="recipes"></div>
+</div>
+
+<div class="Footer" class="center">
+    <h1 class="center">Über uns</h1>
+        <div id="aboutustext" class="center">
+           Wir sind ein junges und engagiertes Team von Köchen,<br>
+           die alles daran setzen, euch dabei zu helfen,
+           ein schönes Gericht auf den Teller zu zaubern.<br>
+           Die Community ist uns sehr wichtig, und aus diesem Grund sind alle Gerichte,<br>
+           die sie hier finden von Nutzern angemerkt und von uns perfektioniert.<br>
+           Wir wünschen ihnen viel Spaß am Kochen und hoffen,<br> auch ihre Gerichte bald einmal 
+           in unserem Posteingang zu empfangen.
+        </div>
+
+        <h1 class="center">Location</h1>
+        <div style="text-align: center;" class="center">
+            <img src="Standort.PNG" style="width:750px; height: 500px; border: 2px solid black;">
+        </div>
+          <p style="font-size: 14pt;" class="center"> Glinka Straße 69</p>
+          <p style="font-size: 14pt;" class="center">14199, Berlin</p>
+      <h1 class="center">Kontakt</h1>
+          <p style="text-decoration: underline;" class="center">Email:</p>    
+              <p class="center">let.them.cook@outlook.com</p>
+          <p style="text-decoration: underline;" class="center"> Telefon:</p> 
+              <p class="center">+030 4765889 </p>
+      <br>
+</div>
+</body>
+
+</html>

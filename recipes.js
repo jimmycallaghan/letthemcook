@@ -82,9 +82,15 @@ function buildTitle(recipe) {
 }
 
 function addRecipeData(recipe) {
-    $('#cookTimeText').append(recipe.infos.cookingTime + " mins");
+    $('#cookTimeText').append(recipe.infos.cookingTime + " min.");
     $('#difficulty').append(recipe.infos.difficulty);
     $('#dateAdded').append(recipe.infos.dateAdded);
+}
+
+function addCookingTimes(recipe) {
+    $('#worktime').append(recipe.cooktime.worktime + " min.");
+    $('#oventime').append(recipe.cooktime.oventime + " min.");
+    $('#cookingTime').append(recipe.cooktime.cookingTime + " min.");
 }
 
 function addRecipeImage(recipe) {
@@ -92,13 +98,18 @@ function addRecipeImage(recipe) {
     $('#recipeImg').append('<img src="' + recipe.img.src + '" alt="' + recipe.img.alt + '" class="img">');
 }
 
-function buildPage(recipeId) {
+function RecipeCategorys(recipe) {
+
+}
+
+function buildPage(recipeId, category) {
     buildTitle(recipes[recipeId]);
     addRecipeImage(recipes[recipeId]);
     buildIngredients(recipes[recipeId]);
     buildNaehrwerte(recipes[recipeId]);
     buildMethod(recipes[recipeId]);
     addRecipeData(recipes[recipeId]);
+    addCookingTimes(recipes[recipeId]);
 }
 
 // Stole this from internet:

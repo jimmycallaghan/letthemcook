@@ -10,16 +10,24 @@ body {
 .center {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
+.Footer {
+    background-color: rgba(233, 152, 30, 0.911);
+    border: 2px solid black;
+    margin: 200px;
+    border-radius: 10px;
+}
 
-
-
-
-#titel {
+#categoryTitle {
     font-size: 50px;
     border: 3px solid black;
     border-radius: 5px;
+}
+
+#categoryTitle::first-letter {
+    text-transform: capitalize;
 }
 
 .titel-2 {
@@ -27,6 +35,38 @@ body {
     margin: 5px;
     border-radius: 10px;
     border: 3px solid black;
+}
+
+
+
+
+
+
+#FoodGenres {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FoodGenre {
+    margin: 5px;
+    background-color: grey;
+    width: 300px;
+}
+
+.FoodGenreTitle {
+    height: 20px;
+}
+
+.FoodGenreImg img {
+    width: 500px;
+}
+
+.recipeShortDesc {
+    height: 20px;
+}
+
+#FoodGenreDivSize {
+    width: 800px; 
 }
 
 
@@ -58,10 +98,10 @@ body {
 
 .InfosForRecipe {
     border-radius: 10px;
-    /*background-color: lightgray;*/
     border: 2px solid rgb(119, 119, 119);
-    font-size: 30px
+    font-size: 30px;
 }
+
 
 
 
@@ -86,6 +126,7 @@ table, tr, td {
 .methodStepCol1 {
     width: 100px;
 }
+
 
 
 
@@ -116,3 +157,58 @@ table, tr, td {
 .InfoRecipeImg {
     height: 25px;
 }
+
+
+
+
+
+#header {
+    width: 95%;height: 150px;
+    background-color:rgba(233, 152, 30, 0.911);
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 50px;
+}
+#title  {
+    font-size: 60pt;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.logo {   
+    position: relative;
+    top:21px; 
+    left:16px;
+    border-radius: 10px;
+    height: 75%;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 95%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  

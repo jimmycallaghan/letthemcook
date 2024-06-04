@@ -2,79 +2,34 @@
 <html lang="de">
 <head>
     <title>Mexikanisch burrito 1</title>
-    <style>
-        body {
-            font-family: arial;
-        }
-
-        #content {
-            margin: auto;
-            width: 50%;
-        }
-
-        #titel {
-            font-size: 40px;
-            background-color: grey;
-        }
-
-        #FoodGenres {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-
-
-
-
-        .FoodGenre {
-            margin: 5px;
-            background-color: grey;
-            width: 300px;
-        }
-
-        .FoodGenreTitle {
-            height: 20px;
-        }
-
-        .FoodGenreImg img {
-            width: 500px;
-        }
-
-        .recipeShortDesc {
-            height: 20px;
-        }
-
-        #FoodGenreDivSize {
-            width: 800px;
-        }
-    </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="recipes.css">
 
     <script>
         var FoodGenres = [
             {
                 title: 'Mexikanisch',
                 img: 'img/mexican.jpg',
-                href: 'mexikanisch-rezept.html',
+                href: 'recipesForCategory.html?category=mexican',
                 desc: 'Lorem ipsum blah die blah'
             },
             {
                 title: 'Italienisch',
                 img: 'img/italien.jpg',
-                href: 'Italienisch-rezept.html',
+                href: 'recipesForCategory.html?category=italien',
                 desc: 'Lorem ipsum blah die blah'
             },
             {
                 title: 'Asiatisch',
                 img: 'img/asian.jpg',
-                href: 'recipes/quesadilla.html',
+                href: 'recipesForCategory.html?category=asiatisch',
                 desc: 'Lorem ipsum blah die blah'
             },
             {
                 title: 'Nachtisch',
                 img: 'img/dessert.jpg',
-                href: 'recipes/nacho.html',
+                href: 'recipesForCategory.html?category=my_dick_smells',
                 desc: 'Lorem ipsum blah die blah'
             }
         ];
@@ -100,14 +55,54 @@
         }
 
     </script>
-
 </head>
 
 <body>
+    <header id="header">
+        <img class="logo" src="logo.png" alt="Logo der Website">
+            <span id="title">Let them cook</span>
+    </header>
+
+
+    <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">News</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+    </ul>
+
 
 <div id="content">
-    <div id="titel">Menu</div>
+    <div id="categoryTitle">Menu</div>
     <div id="FoodGenres"></div>
+</div>
+
+
+
+<div class="Footer" class="center">
+    <h1 class="center">Über uns</h1>
+        <div id="aboutustext" class="center">
+           Wir sind ein junges und engagiertes Team von Köchen,<br>
+           die alles daran setzen, euch dabei zu helfen,
+           ein schönes Gericht auf den Teller zu zaubern.<br>
+           Die Community ist uns sehr wichtig, und aus diesem Grund sind alle Gerichte,<br>
+           die sie hier finden von Nutzern angemerkt und von uns perfektioniert.<br>
+           Wir wünschen ihnen viel Spaß am Kochen und hoffen,<br> auch ihre Gerichte bald einmal 
+           in unserem Posteingang zu empfangen.
+        </div>
+
+        <h1 class="center">Location</h1>
+        <div style="text-align: center;" class="center">
+            <img src="Standort.PNG" style="width:750px; height: 500px; border: 2px solid black;">
+        </div>
+          <p style="font-size: 14pt;" class="center"> Glinka Straße 69</p>
+          <p style="font-size: 14pt;" class="center">14199, Berlin</p>
+      <h1 class="center">Kontakt</h1>
+          <p style="text-decoration: underline;" class="center">Email:</p>    
+              <p class="center">let.them.cook@outlook.com</p>
+          <p style="text-decoration: underline;" class="center"> Telefon:</p> 
+              <p class="center">+030 4765889 </p>
+      <br>
 </div>
 </body>
 
